@@ -7,6 +7,7 @@ const path  = require('path');
 const fs  = require('fs');
 
 
+const render = require("./lib/renderHtml");
 
 
 let roleArray = [];
