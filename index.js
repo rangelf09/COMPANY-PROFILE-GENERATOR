@@ -6,6 +6,9 @@ const inquirer = require("inquirer");
 const path  = require('path');
 const fs  = require('fs');
 
+const source_dir = path.resolve(__dirname, 'src');
+const sourcePath = path.join(source_dir, 'team.html');
+
 
 const render = require("./lib/renderHtml");
 
