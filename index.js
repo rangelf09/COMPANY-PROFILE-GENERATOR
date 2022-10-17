@@ -47,6 +47,12 @@ const managerRespnse = [
         name: 'office',
         message: 'What is your office number?',
     },
+    {
+        type: 'list',
+        name: 'end',
+        message: "Do you have any more employees?",
+        choices: ['Yes','No']
+    },
 ]
 
 const engineerResponse = [
@@ -69,7 +75,13 @@ const engineerResponse = [
         type: 'input',
         name: 'github',
         message: 'What is your github name?',
-    }
+    },
+    {
+        type: 'list',
+        name: 'end',
+        message: "Do you have any more employees?",
+        choices: ['Yes','No']
+    },
 
 ]
 
@@ -94,29 +106,35 @@ const internResponse = [
         name: 'school',
         message: 'What school do they attend?',
     },
+    {
+        type: 'list',
+        name: 'end',
+        message: "Do you have any more employees?",
+        choices: ['Yes','No']
+    },
 ]
 
 function managerArray (input) {
     let objectArray = new Manager (input.name, input.id, input.email, input.office)
     roleArray.push(objectArray);
-    if (input.last === "Yes"){
-            fs.writeFile('./dist/team.html', render(objectArray),(err) => err? console.log(err): console.log("HTML was Creaded"));
+    if (input.end === "No"){
+            fs.writeFile('./dist/team.html', render(roleArray),(err) => err? console.log(err): console.log("HTML was Creaded"));
     } else {init()}
 }
 
 function engineerArray (input) {
     let objectArray = new Engineer (input.name, input.id, input.email, input.github)
     roleArray.push(objectArray);
-    if (input.last === "Yes"){
-    fs.writeFile('./dist/team.html', render(objectArray),(err) => err? console.log(err): console.log("HTML was Creaded"));
+    if (input.end === "No"){
+    fs.writeFile('./dist/team.html', render(roleArray),(err) => err? console.log(err): console.log("HTML was Created"));
     } else {init()}
 }
 
 function internArray (input) {
     let objectArray = new Intern (input.name, input.id, input.email, input.school)
     roleArray.push(objectArray);
-    if (input.last === "Yes"){
-    fs.writeFile('./dist/team.html', render(objectArray),(err) => err? console.log(err): console.log("HTML was Creaded"));
+    if (input.end === "No"){
+    fs.writeFile('./dist/team.html', render(roleArray),(err) => err? console.log(err): console.log("HTML was Creaded"));
     } else {init()}
 }
 
