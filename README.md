@@ -5,9 +5,12 @@ Description: This application allows users to create a comapny profile depending
 
 Video: 
 
-
+https://drive.google.com/file/d/1ew3CQt5TfXl3rnVH9QJ2-g5kR5PgeJDl/view
 
 Images: 
-
+![](assets/Screen%20Shot%202022-10-24%20at%201.00.09%20PM.png)
 
 Helpful links: 
+https://www.digitalocean.com/community/tutorials/nodejs-how-to-use__dirname
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
